@@ -1,0 +1,62 @@
+ <!doctype html>
+<html>
+<head>
+	<title>munirul</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <!-- i have used some google fonts too -->
+	<link href='https://fonts.googleapis.com/css?family=Merienda+One|Aldrich|Nothing+You+Could+Do|Crete+Round|Karla:400,700|Original+Surfer|Salsa|Marmelad|Averia+Sans+Libre:700|Righteous|Sancreek|Alegreya+SC:900' rel='stylesheet' type='text/css'>
+	
+	<style>
+		#sample{
+			margin: 0 auto;
+		    width: 900px;
+		   border: 1px solid seagreen;
+		   padding: 10px; 
+
+		 }
+	</style>
+</head>
+<body>
+<script>
+	 $(document).ready(function() {
+		$("#fontsense").change(function () {
+			var str = "";
+			$("#fontsense option:selected").each(function () {
+				str += $(this).text() + " ";
+			});
+			$("p").css('font-family', str);
+		});     
+	});    
+	</script>
+
+
+
+	<h2>Simple jQuery Change Font Family from drop down</h2>
+	<div id="sample">
+		Change Font: <select id="fontsense" >
+			<option>Select Font</option>
+			<!--default fonts-->
+			<option>Arial</option>
+			<option>Comic Sans MS</option>
+			<option>Trebuchet MS</option>
+			<option>Verdana</option>
+
+			<!--google fonts-->
+			<option>Averia Sans Libre</option>
+			<option>Righteous</option>
+			<option>Sancreek</option>
+			<option>Alegreya SC </option>
+			<option>Merienda One</option>
+			<option>Aldrich</option>
+			<option>Nothing You Could Do</option>
+			<option>lato</option>
+			<option>Open Sans</option>
+			<option>Vollkorn</option>
+			<option>Abril Fatface</option>
+			<option>Ubuntu</option>
+			
+		  </select>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	</div>
+</body>
+</html>
